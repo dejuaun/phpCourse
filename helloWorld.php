@@ -33,8 +33,9 @@ echo "<h2>This is a html h2 heading</h2>";
 <?php 
 echo "this echo is case sensitive"."<br>";
 ECHO "this ECHO is case sensitive"."<br>";
-echo date(y/m/d)."<br>";]
-asd
+echo date("y/m/d")."<br>";
+echo DATE("y.m.d").:"<br>";
+
 ?>
 </body>
 </html>
