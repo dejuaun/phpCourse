@@ -105,10 +105,14 @@ echo constant("GREETING")."<br>";
 	echo($a + $b) ."= &nbsp 20 + 50", "<br>";
 	echo($a * $b) ."= &nbsp 20 x 50", "<br>";
 	echo($a / $b) ."= &nbsp 20 ÷ 50", "<br>";
-	echo($a % $b) ."= &nbsp 20 ÷ 50 remainder", "<br>";
-	echo $a;
-	
-
+	echo($a % $b) ."= &nbsp 20 ÷ 50 remainder", "<br>";	
+?>
+<br>
+<hr>
+<h2>Assignment Operators</h2>
+<?php 
+	$aa = 50;
+	echo $aa;
 ?>
 </body>
 </html>
