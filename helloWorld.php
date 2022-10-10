@@ -113,6 +113,7 @@ echo constant("GREETING")."<br>";
 <?php 
 	$aa = 50;
 	echo $aa;
+	¢cd
 ?>
 </body>
 </html>
