@@ -112,8 +112,124 @@ echo constant("GREETING")."<br>";
 <h2>Assignment Operators</h2>
 <?php 
 	$aa = 50;
-	echo $aa;
-	¢cd
+	echo ($aa), "<br>";
+	$aa = 50;
+	$aa+=20;
+	echo ($aa), "<br>";
+	$aa = 50;
+	$aa-=20;
+	echo ($aa), "<br>";
+	$aa = 50;
+	$aa*= 20;
+	echo ($aa), "<br>";
+	$aa = 50;
+	$aa/= 20;
+	echo ($aa), "<br>";
+	
+?>
+<br>
+<hr>
+<h2>Comparision Operators</h2>
+<?php 
+	$x = 10;
+	$y = 15;
+	$a="10";
+
+	var_dump($x==$y);
+		echo "<br>";
+	var_dump($x===$y);
+		echo "<br>";
+	var_dump($x!=$y);
+		echo "<br>";
+	var_dump($x!==$y);
+		echo "<br>";
+	var_dump($x<>$y);
+		echo "<br>";
+?>
+<br>
+<hr>
+<h2>Incrementing and Decrementing Operator</h2>
+<?php 
+	$x = 5;
+	echo ++$x;
+	echo $x;
+	echo "<br>";
+	$x = 5;
+	echo $x++;
+	echo $x;
+	echo "<br>";
+	$x = 6;
+	echo --$x;
+	echo $x;
+	echo "<br>";
+	$x = 5;
+	echo $x--;
+	echo $x;
+?>
+<hr>
+<br>
+<h2>Logical Operators</h2>
+<?php 
+	$x = true && false;
+	var_dump($x);
+	echo "<br>";
+	$y = false || true;
+	var_dump($x);
+	echo "<br>";
+	$z = !true;
+	var_dump($z);
+?>
+<br>
+<hr>
+<h2>String Operators</h2>
+<?php 
+	$a = "PHP";
+	$b = "Programming";
+	echo $a .$b;
+?>
+<br>
+<hr>
+<h2>Get Method</h2>
+	<form action="register.php" method="get">
+		Full Name:<input type="text" name="name">
+		Email:<input type="text" name="email">
+		<input type="submit" name="submit">
+
+	</form>
+<br>
+<hr>
+<h2>Post Method</h2>
+	<form action="registerPost.php" method="post">
+		Full Name:<input type="text" name="name">
+		Email:<input type="text" name="email">
+		<input type="submit" name="submit">
+	</form>
+<br>
+<hr>
+<h2>PHP Form</h2>
+	<form action="contactBackup.php" method="post">
+		<label for="inputName">FullName<sup>*</sup></label>
+		<input type="text" name="name" id="inputName">
+		<br>
+
+		<label for="inputEmail">Email<sup>*</sup></label>
+		<input type="text" name="email" id="inputEmail">
+		<br>
+
+		<label for="inputSubject">Subject<sup>*</sup></label>
+		<input type="text" name="subject" id="inputSubject">
+		<br>
+
+		<label for="inputMessage">Message<sup>*</sup></label>
+		<textarea name="message" id="inputMessage" rows="6" cols="35"></textarea>
+		<br>
+
+		<input type="submit" name="submit">
+		<input type="reset" name="reset">
+		<br>
+	</form>
+<?php
+
 ?>
 </body>
 </html>
