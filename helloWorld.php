@@ -228,9 +228,96 @@ echo constant("GREETING")."<br>";
 		<input type="reset" name="reset">
 		<br>
 	</form>
-<?php
+	<br>
+	<hr>
+	<h2>Local vs Global variables</h2>
+	<?php  
+	//This a local varaiable
+		function abc($timestamp){
+			$tamp=date("1 F js y", $timestamp);
+			return "The date is $tamp";
+		}
+	//This is a global variable
+		echo "<br>";
 
-?>
+	$name = "asdf";
+	function xyz(){
+		global $name;
+		return $name;
+	}
+	?>
+	<br>
+	<hr>
+	<h2>If Statement</h2>
+	<?php 
+		$time = date("D");{
+			if ($time<"20") {
+				echo "This is a sunny day";
+			}
+		}
+		echo "<br>";
+
+		$abc = "Good Day";
+		if ($ab == "Good Day") {
+			echo "Your Day Is Awesome.";
+		}
+		echo "Your day is awesome";
+	?>
+	<br>
+	<hr>
+	<h2>Else Statement</h2>
+	<?php 
+		$gender = "male";
+		if ($gender == "female") {
+			echo "female";
+		}
+		else {
+			echo "male";
+		}
+		echo "<br>";
+		$age = "25";
+		if ($age>20){
+			echo "Elder";
+		}
+		else {
+			echo "You're a youngster";
+		}
+	?>
+	<br>
+	<hr>
+	<h2>Else If Statment</h2>
+	<?php 
+		$age = 20;
+		if ($age<20){
+			echo "teenager";
+		}
+		elseif ($age<40) {
+			echo "Younger";
+		}
+		else{
+			echo "Older";
+		}
+	?>
+	<hr>
+	<br>
+	<h2>Switch Statement</h2>
+	<?php 
+		$number = 2;
+		switch ($num) {
+			case 1:
+				echo "The number is 1";
+				break;
+
+			case 2:
+				echo "The number is 2";
+				break;
+			
+			default:
+				echo "This number is uknown";
+
+
+		}
+	?>
 </body>
 </html>
 
