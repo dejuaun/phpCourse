@@ -313,10 +313,81 @@ echo constant("GREETING")."<br>";
 				break;
 			
 			default:
-				echo "This number is uknown";
-
+				echo "This number is unknown";
+		}
+	?>
+	<br>
+	<hr>
+	<h2>For Loop</h2>
+	<?php 
+		for ($a=1; $a<=5; $a++){
+			echo "The numbers are ".$a."<br>";
+		}
+	?>
+	<br>
+	<hr>
+	<h2>Foreach Loop</h2>
+	<?php 
+		$array=array("php", "JAVA", "MySQL");
+		foreach ($array as $var){
+			echo "$var", "<br>";
+		}
+	?>
+	<br>
+	<hr>
+	<h2>Nested For Loop</h2>
+	<?php 
+		for ($i=0; $i<=5; $i++){
+			for ($j=0; $j<=5; $j++)
+				echo "$i $j". "<br>";
+		}
+	?>
+	<br>
+	<hr>
+	<h2>While Loop</h2>
+	<?php 
+		$a = 1;
+		while($a<5){
+			echo "Number $a is ". $a;
+			echo "<br>";
+			$a++;
+		}
+	?>
+	<hr>
+	<br>
+	<h2>Do While Loop</h2>
+	<?php 
+		$a = 1;
+		do {
+			echo "This is a do while loop";
+			echo "<br>";
+			$a++;
 
 		}
+		while($a<5);{
+
+		}
+	?>
+	<br>
+	<hr>
+	<h2>Arrays</h2>
+	<?php 
+		$country = array("USA", "UK", "GERMANY", "CANADA");
+		echo $country{2};
+		echo "<br>";
+		/*$countries = array();
+		$countries[0]"china";
+		$countries[1]"austria";
+		$countries[2]"belgium";*/
+	?>
+	<br>
+	<hr>
+	<h2>Associative Array</h2>
+	<?php 
+		$country = array("USA"=>1, "CANADA"=>49, "UK"=>27);
+		var_dump($country);
+		echo "<br>";
+		
 	?>
 </body>
 </html>
