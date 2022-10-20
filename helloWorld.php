@@ -387,7 +387,12 @@ echo constant("GREETING")."<br>";
 		$country = array("USA"=>1, "CANADA"=>49, "UK"=>27);
 		var_dump($country);
 		echo "<br>";
-		
+		$countrys=["USA"=>1, "CANADA"=>49, "UK"=>27	
+		]
+		foreach($countrys as $a=> $a_value){
+			echo "key =".$a." Value=".$a_value;
+			echo "<br>";
+		}
 	?>
 </body>
 </html>
