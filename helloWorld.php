@@ -463,6 +463,81 @@ echo constant("GREETING")."<br>";
 		}
 		calc(6,4);
 	?>
+	<br>
+	<hr>
+	<h2>Passing arguments by reference</h2>
+	<?php 
+		function arg($i){
+			$i="php";
+		}
+		$hi = "PHP5";
+		arg($hi);
+		echo $hi;
+		echo "<br>";
+
+		function asdf(&$a){
+			$a="php";
+		}
+		$hello="this is php5";
+		asdf($hello);
+		echo $hello;
+	?>
+	<br>
+	<hr>
+	<h2>Functions returning value</h2>
+	<?php 
+  		function test2($num1, $num2){
+  			$num3 = $num1 + $num2;
+  			return $num3;
+  		}
+
+  		$a = test2(9, 20);
+  		echo "The value after adding the function: $a";
+  		
+	?>
+	<br>
+	<hr>
+	<h2>Functions with optional parameters and default values</h2>
+	<?php 
+		function lkj($a = 50){
+			echo "value $a \n"; 
+		}
+
+		lkj();
+		lkj(10);
+		lkj(100);
+
+	?>
+	<br>
+	<hr>
+	<h2>Dynamic function call</h2>
+	<?php 
+		function elf(){
+			echo "Dynamic Function Call";
+		}
+		$func = "elf";
+		$func();
+	?>	
+	<br>
+	<hr>
+	<h2>PHP Anonymous Functions</h2>
+	<?php 
+		$a = function(){
+			echo "This is an anonymous function";
+		};
+		$a();
+	?>
+	<br>
+	<hr>
+	<h2>Variable Scope</h2>
+	<?php 
+		function tuy(){
+			$a = "php";
+			echo $a;
+		}
+
+		tuy();
+	?>
 </body>
 </html>
 
