@@ -387,12 +387,81 @@ echo constant("GREETING")."<br>";
 		$country = array("USA"=>1, "CANADA"=>49, "UK"=>27);
 		var_dump($country);
 		echo "<br>";
-		$countrys=["USA"=>1, "CANADA"=>49, "UK"=>27	
-		]
+		
+		$countrys=array("USA"=>5,"GERMANY"=>15,"FRANCE"=>7);
+
 		foreach($countrys as $a=> $a_value){
-			echo "key =".$a." Value=".$a_value;
-			echo "<br>";
+			echo "key =".$a. " value=".$a_value;
+			echo "<br>"; 
 		}
+	?>
+	<br>
+	<hr>
+	<h2>Multidimensional Array</h2>
+	<?php  
+		$info=array(
+			array(
+				"name"=>"bob",
+				"address"=>"xx street usa",
+				"email"=>"xcy@gmail.com",
+			),
+			array(
+				"name"=>"jon",
+				"address"=>"x23 street usa",
+				"email"=>"asd@gmail.com",
+			)
+
+		);
+		echo "bob's information here is ",$info[0]["email"],"\n";
+		echo "jon's information here is ",$info[1]["address"],"\n";
+	?>
+	<br>
+	<hr>
+	<h2>Sorting Array</h2>
+	<?php 
+ 		$num = array(19, 4, 6, 5, 8, 99, 56, 29);
+ 		sort($num);
+ 		$array=count($num);
+ 		for ($x=0; $x<$array; $x++){
+ 			echo $num[$x];
+ 			echo "<br>";
+ 		}
+ 		$house = array("big", "small", "medium", "average");
+ 		sort($house);
+ 		var_dump($house);
+	?>
+	<br>
+	<hr>
+	<h2>Create tables using for loops</h2>
+	<table align="left" border="2" cellpadding="4" cellspacing="0">
+	<?php 
+		for($i=1; $i<=3; $i++){
+			echo "<tr>";
+			for ($j=1; $j<=2; $j++){
+				echo "<td> $i * $j=".$i*$j."</td>";
+			}
+			echo "</tr>";
+		}
+	?>
+	</table>
+	<br>
+	<hr>
+	<h2>Defining and Creating a function</h2>
+	<?php  
+		function test(){
+			echo "Welcome to this function";
+		}
+		test();
+	?>
+	<br>
+	<hr>
+	<h2>Functions with parameters</h2>
+	<?php 
+		function calc($num1, $num2){
+			$num3 = $num1 + $num2;
+			echo "The results of these numbers are $num3";
+		}
+		calc(6,4);
 	?>
 </body>
 </html>
