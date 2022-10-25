@@ -541,18 +541,6 @@ echo constant("GREETING")."<br>";
 	?>
 	<br>
 	<hr>
-	<h2>Recursive Function</h2>
-	<?php 
-		function fact($n){
-			if($n<0)
-				return -1;
-			if($n==0)
-				return 1;
-			return($n *fact($f-1));
-		}
-		echo fact(5);
-	?>
-	
 </body>
 </html>
 
