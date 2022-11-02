@@ -95,9 +95,38 @@
 	<br>
 	<hr>
 	<h2>Form Handling</h2>
-	
+	<form method="post" action="formphp.php">
+		<label> Full Name <sup>*</sup></label>
+		<input type="text" size="24" name="name" value="inputName">
+		<br>
+		<label> Email Address <sup>*</sup></label>
+		<input type="email" size="24" name="email" value="inputEmail">
+		<br>
+		<label> Subject <sup>*</sup></label>
+		<textarea name="subject" id="inputSubject" cols="30" rows="5"></textarea>
+		<br>
+		<input type="submit" name="submit">
+	</form>
+	<br>
+	<hr>
+	<h2>Forms Required</h2>
+	<form method="post" action="required.php">
+		Name:<input type="text" name="name">
+		<span class="error"><</span>
+		<br>
+		Email:<input type="email" name="email">
+		<span class="error"></span>
+		<br>
+		<input type="submit" name="submit">	
+	</form>
+	<br>
+	<hr>
+	<h2>Include File</h2>
+	<?php Include 'pageone.php'?>	
+	<?php include 'pagetwo.php'?>
 </body>
 </html>
+
 
 
 
