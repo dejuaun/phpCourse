@@ -124,6 +124,98 @@
 	<h2>Include File</h2>
 	<?php Include 'pageone.php'?>	
 	<?php include 'pagetwo.php'?>
+	<br>
+	<hr>
+	<h2>Cookies</h2>
+	<?php 
+		define('MAX_PAGEVIEW', 11);
+		$message = '';
+		if(!isset($_COOKIE['pageview'])){
+			setcookie('pageview', 1,0, '/');
+			$message="Hi, welcome to this website";
+		}
+		else{
+			$pageview = (int)$_COOKIE['pageview'];
+			$pageview +=1;
+			if($pageview<=MAX_PAGEVIEW){
+				setcookie('pageview', $pageview, 0,'/');
+				$message = sprintf('Page Visit #%d', $pageview);
+			}
+		else{
+			setcookie('pageview', '', time()-3600, '/');
+			$message = "Cookies are removed";
+		}
+		}
+		echo "<br>, <h1>Cookie</h1>";
+		echo $message;
+		//definitely wrong 
+	?>
+	<br>
+	<hr>
+	<h2>PHP Session</h2>
+	<?php  
+		//session_start();
+		$_SESSION['firstname']="David"; //global variable
+		$_SESSION['lastname']="John";
+		//echo "I created a session";
+		echo "My first name is ", $_SESSION['firstname'], "<br>";
+		echo "My last name is ", $_SESSION['lastname'], "<br>";
+	?>
+	<br>
+	<hr>
+	<h2>PHP Date and Time</h2>
+	<?php 
+		$date = date("d/m/y");
+		echo $date;
+		echo "<br>";
+		echo "The time is ", date("h:i:sa");
+		echo "<br>";
+		date_default_timezone_get("Asia/Bangkok");
+		echo "The time is" .date("h:i:sa"), "<br>";
+		$date1 = mktime(12, 14, 54, 03, 25, 2020);
+		echo $date1;
+	?>
+	<br>
+	<hr>
+	<h2>PHP Filter</h2>
+	<?php  
+		foreach (filter_list() as $id=>$filter) {
+			echo "<li>", $filter.',' .filter_id($filter). "</li>";
+		}
+		//This lists the filters in php
+		echo "<br>";
+
+		$a = -2.20;
+		if (filter_var($a, FILTER_VALIDATE_INT)){
+			echo " <b>$a</b> is a valid integer";
+		}
+		else{
+			echo " <b>$a</b> is not a valid integer";
+		}
+	?>
+	<br>
+	<hr>
+	<h2>Custom Error Handling</h2>
+	<?php  
+		function error($error_no, $errormessage){
+			echo "Error: [$error_no] $errormessage";
+			echo "<br> The script ends here";
+			die();
+		}
+		set_error_handler("error");
+		$a = 20;
+		$b = 0;
+
+		echo $a/$b;
+	?>
+	<br>
+	<hr>
+	<h2>Exceptions Handling</h2>
+	<?php 
+		
+	?>
+</body>
+</body>
 </body>
 </html>
 
