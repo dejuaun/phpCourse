@@ -309,6 +309,37 @@
 	 	$sportcar ->set_model("bmw");
 	 	echo $sportcar->a();
 	 ?>
+	 <br>
+	 <hr>
+	 <h2>Encapsulation</h2>
+	 <?php 
+	 	class human{
+	 		private $name;
+	 		private $gender;
+
+	 		public function get_name(){
+	 			return $this->name;
+	 			return $this;
+	 		}
+	 		public function get_gender(){
+	 			return $this->gender;
+	 			return $this;
+	 		}
+	 		public function set_gender($gender){
+	 			if('male' != $gender and 'female' !=$gender){
+	 				throw new Exception('set male or female for gender');
+	 				
+	 			}
+	 			$this->gender=$gender;
+	 			return $this;
+	 		}
+	 		}
+	 		$human1 = new human();
+	 		$human1 -> get_name('bob');
+	 		$human1 -> set_gender('male');
+	 	}
+	 	//deffo wrong. Bro is clueless
+	 ?>
 </body>
 </html>
 
