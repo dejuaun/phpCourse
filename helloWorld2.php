@@ -210,12 +210,7 @@
 	?>
 	<br>
 	<hr>
-	<h2>Exceptions Handling</h2>
-	<?php 
-		
-	?>
-</body>
-</body>
+	
 </body>
 </html>
 
