@@ -258,6 +258,57 @@
 		echo $bird->birdname;
 		echo "<br>";
 	 ?>
+	 <?php 
+	 	class abc{
+	 		public function a(){
+	 			echo "constructor";
+	 		}
+	 	}
+	 	class b extends abc{
+	 		public function __construct(){
+	 			echo parent::abc();
+	 			echo "constructor of child";
+	 		}
+	 		public function __destruct(){
+	 			echo "Destroy the destructor";
+	 		}
+	 	}
+	 	$object = new b();
+	 ?>
+	 <br>
+	 <hr>
+	 <h2>Inheritance</h2>
+	 <?php 
+	 	class parent1{
+	 		function a(){
+	 			echo "Parent Class";
+	 		}
+	 	}
+	 	class child1 extends parent1{
+	 		function b(){
+	 			echo "Child class";
+	 		}
+	 	}
+	 	$object = new child1();
+	 	$object -> a();
+	 ?>
+	 <?php 
+	 	class car{
+	 		private $model;
+	 		public function set_model($model){
+	 			$this ->model=$model;
+	 		}
+	 		public function a(){
+	 			return "horn sound". $this->model;
+	 		}
+	 	}
+	 	class sportcar extends car{
+
+	 	}
+	 	$sportcar = new sportcar();
+	 	$sportcar ->set_model("bmw");
+	 	echo $sportcar->a();
+	 ?>
 </body>
 </html>
 
