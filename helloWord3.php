@@ -340,6 +340,84 @@
 	 	}
 	 	//deffo wrong. Bro is clueless
 	 ?>
+	 <?php 
+	 	class bank{
+	 		 public $bank_account;
+	 		 public $bank_balance;
+	 		 function __construct($bank_account, $bank_balance){
+	 		 	$this -> bank_account = $bank_account;
+	 		 	$this -> bank_balance = $bank_balance;
+	 		 }
+	 		 public function bank_detail(){
+	 		 	echo "Bank account details are $this->bank_account and you Bank balance is $this->bank_balance";
+	 		 }
+	 	}
+	 	$obj1 = new bank("153698", "56320");
+	 	echo $obj->bank_detail();
+	 ?>
+	 <br>
+	 <hr>
+	 <h2>Polymmorphism</h2>
+	 <?php 
+	 	class parent2{
+	 		public function poly(){
+	 			echo "Base or parent Method Polly Called";
+	 		}
+	 		class child2 extends parent{
+	 			public function poly(){
+	 				echo "Child class called poly method";
+	 			}
+	 		}
+	 	}
+	 	function parent_function(parent2 $p){
+	 		$p ->poly();
+	 	}
+	 	$p = new child();
+	 	parent_function($p);
+	 ?>
+	 <?php 
+	 	interface shape{
+	 		public function area();
+	 	} 
+	 	class circle implements shape{
+	 		private $radius;
+	 		public __construct($radius){
+	 			$this->radius=$radius;
+	 		}
+	 		public function area(){
+	 			return $this-> radius*$this->radius*pi();
+	 		}
+	 	}
+	 	class rect implements shape{
+	 		private $width;
+	 		private $height;
+	 		public function __construct($width, $height){
+	 			$this->width=$width;
+	 			$this->height=$height;
+	 		}
+	 		public function area(){
+	 			return $this->width*$this->height;
+	 		}
+	 	}
+	 	$obj = new rect(4,4);
+	 	echo $objrect->area();
+
+	 	$objcirc = new circle(8);
+	 	echo $objcirc-> area();
+	 ?>
+	 <br>
+	 <hr>
+	 <h2>Abstract class and interfaces</h2>
+	 <?php 
+	 	interface asd{}
+	 	interface sdf{}
+
+	 	interface asd extends interface sdf()
+
+	 	abstract class animal{
+	 		abstract function xyz(){};
+	 	}
+	 ?>
 </body>
 </html>
 
