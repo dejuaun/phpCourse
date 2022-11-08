@@ -418,6 +418,34 @@
 	 		abstract function xyz(){};
 	 	}
 	 ?>
+	 <br>
+	 <hr>
+	 <h2>Final Keyword</h2>
+	 <?php 
+	 	final class abc{
+	 		public $name;
+
+	 	}
+	 	class xyz{
+	 		final public function xyz(){
+	 			return "This is the the final word";
+	 		}
+	 	}
+	 ?>
+	 <br>
+	 <hr>
+	 <h2>MYSQL Connect</h2>
+	 <?php 
+	 	$dbhost = "localhost:8888";
+	 	$dbusername = "root";
+	 	$dbpassword = "";
+	 	$conn = mysqli_connect($dbhost, $dbusername, $dbpassword);
+
+	 	if(!$conn){
+	 		die ("Connection is failed" .mysqli_connect_error());
+	 	}
+	 	echo "Connection for the database has been created";
+	 ?>
 </body>
 </html>
 
